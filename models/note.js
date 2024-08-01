@@ -10,3 +10,9 @@ const noteSchema = new mongoose.Schema({
 const Note = mongoose.model('Note', noteSchema)
 
 module.exports = Note
+
+const articleSchema = new mongoose.Schema({
+    title: { type: String, required: true},
+    body: { type: String, required: true},
+    slug: { type: String, required: true, unique: true}
+})
